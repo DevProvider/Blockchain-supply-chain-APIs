@@ -1,4 +1,4 @@
-# Supplychain-Node
+# Supplychain APIs
 
 SupplyChain Example is a version of the Hyperledger Fabric sample created by Devprovider.
 

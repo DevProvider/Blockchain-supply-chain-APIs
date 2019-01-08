@@ -16,14 +16,18 @@ $ npm install
 ```
 after a successfull npm install run
 
-` node enrollAdmin.js`
+```
+$node enrollAdmin.js
+```
 
 then run 
-
-` node registerUser.js`
+```
+$ node registerUser.js
+```
 
 In the end run the APIs by 
-
-`node app.js` 
+```
+$ node app.js
+```
 
 Now that your node file is running. Use the given postman file in the repository to use the APIs.

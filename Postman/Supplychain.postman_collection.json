@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "7830568b-64e6-40b4-946c-0bbc44b2aa26",
+		"name": "Supplychain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customerID\": \"customer_4\",\n\t\"name\": \"Danyal\",\n    \"address\": \"Street 111\",\n    \"location\": \"ISB\",\n    \"city\": \"Islamabad\",\n    \"zip\": \"7100\",\n    \"businessPhone\": \"123894\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/addcustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addcustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productID\":\"Product_1\",\n    \"name\":\"Pro\",\n    \"productType\":\"Sport\",\n    \"size\":\"Large\",\n    \"price\":\"$300\",\n    \"quantity\":\"20\",\n    \"company\":\"addidas\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/addproducts",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addproducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"orderID\":\"order_1\",\n    \"fk_productID\":\"product_1\",\n    \"fk_customerID\":\"customer_1\",\n    \"shippingAddress\":\"Street102\",\n    \"quantity\":\"20\",\n    \"totalPrice\":\"$5000\",\n    \"dateOfOrder\":\"2018-11-01\",\n    \"dateofReceiving\":\"2018-11-01\"\n \n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/addorders",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addorders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShippingStatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shippingID\":\"shipping_1\",\n    \"fk_orderID\":\"order_1\",\n    \"currentLocation\":\"ISB\",\n    \"time_stamp\":\"2018-11-01\"\n    \n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/addshippingstatus",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addshippingstatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/api/querycustomer?customerID=customer_1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"querycustomer"
+					],
+					"query": [
+						{
+							"key": "customerID",
+							"value": "customer_1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/api/queryproduct?productID=Product_1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"queryproduct"
+					],
+					"query": [
+						{
+							"key": "productID",
+							"value": "Product_1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/api/queryorder?orderID=order_1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"queryorder"
+					],
+					"query": [
+						{
+							"key": "orderID",
+							"value": "order_1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShippingStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/api/queryshippingstatus?shippingID=shipping_1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"queryshippingstatus"
+					],
+					"query": [
+						{
+							"key": "shippingID",
+							"value": "shipping_1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
